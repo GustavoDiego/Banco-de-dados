@@ -99,7 +99,7 @@ A plataforma não requer que os usuários criem contas, evitando a retenção de
 
 ### Modelo Conceitual
 
-![Modelo Conceitual](projeto_conceitual\mdconceitual.jpg)
+![Modelo Conceitual](https://github.com/GustavoDiego/Banco-de-dados/blob/readd-names/projeto_conceitual/mdconceitual.jpg?raw=true)
 
 ---
 
