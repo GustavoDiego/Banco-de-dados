@@ -121,6 +121,10 @@ A plataforma não requer que os usuários criem contas, evitando a retenção de
 <table>
   <tr>
     <td align="center">
+      <img src="https://avatars.githubusercontent.com/u/131917608?v=4" width="100px;" alt="Alberis"/><br />
+      <b>Alberis</b><br />
+    </td>
+    <td align="center">
       <img src="https://avatars.githubusercontent.com/u/131917694?v=4" width="100px;" alt="Aldo Lemos"/><br />
       <b>Aldo Lemos</b><br />
     </td>
@@ -131,18 +135,14 @@ A plataforma não requer que os usuários criem contas, evitando a retenção de
     <td align="center">
       <img src="https://avatars.githubusercontent.com/u/121072900?v=4" width="100px;" alt="Gustavo Diego"/><br />
       <b>Gustavo Diego</b><br />
+       <td align="center">
+      <img src="https://avatars.githubusercontent.com/u/131627751?v=4" width="100px;" alt="Hyan"/><br />
+      <b>Hyan</b><br />
+    </td>
     </td>
     <td align="center">
       <img src="https://avatars.githubusercontent.com/u/83255127?v=4" width="100px;" alt="Mariana Marinho"/><br />
       <b>Mariana Marinho</b><br />
-    </td>
-    <td align="center">
-      <img src="" width="100px;" alt="Alberis"/><br />
-      <b>Alberis</b><br />
-    </td>
-    <td align="center">
-      <img src="" width="100px;" alt="Hyan"/><br />
-      <b>Hyan</b><br />
     </td>
   </tr>
 </table>
