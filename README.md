@@ -97,6 +97,10 @@ A plataforma não requer que os usuários criem contas, evitando a retenção de
 - **Evento - Plataforma de Venda:** Muitos para Muitos (N:M) - Relacionamento **Tem**
 - **Plataforma de Venda - Ingresso:** Muitos para Muitos (N:M) - Relacionamento **Contém**
 
+### Modelo Conceitual
+
+![Modelo Conceitual](https://github.com/GustavoDiego/Banco-de-dados/blob/readd-names/projeto_conceitual/mdconceitual.jpg?raw=true)
+
 ---
 
 ## Conceitos Utilizados 🧠
