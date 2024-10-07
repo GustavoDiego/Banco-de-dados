@@ -53,9 +53,9 @@ CREATE TABLE Organizador (
 )
 
 CREATE TABLE Participante ( 
-    id_participante NUMBER PRIMARY KEY, 
+    id NUMBER PRIMARY KEY, 
     categoria VARCHAR2(50), 
-    CONSTRAINT fk_participante_pessoa FOREIGN KEY (id_participante) REFERENCES Pessoa(id) 
+    CONSTRAINT fk_participante_pessoa FOREIGN KEY (id) REFERENCES Pessoa(id) 
 )
 
 CREATE TABLE Contato_Telefone ( 
