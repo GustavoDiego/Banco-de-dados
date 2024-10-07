@@ -1,0 +1,30 @@
+-- Consulta com WHERE e ORDER BY
+SELECT nome, valor_ingresso 
+FROM Evento 
+WHERE valor_ingresso > 0 
+ORDER BY valor_ingresso DESC;
+
+-- Consulta com COUNT e GROUP BY
+SELECT id_local, COUNT(*) AS TotalEventos
+FROM Evento
+GROUP BY id_local;
+
+-- Consulta com HAVING e LIMIT
+SELECT id_local, AVG(valor_ingresso) AS MediaValor
+FROM Evento
+GROUP BY id_local
+HAVING AVG(valor_ingresso) > 50;
+
+-- Consulta com JOIN
+SELECT P.nome, E.nome AS Evento
+FROM Participante P
+JOIN Participacao PA ON P.id_participante = PA.id_participante
+JOIN Evento E ON PA.id_evento = E.id;
+
+-- Consulta com subconsulta
+SELECT nome
+FROM Local
+WHERE id IN (
+    SELECT id_local 
+    FROM Evento 
+    WHERE valor_ingresso > 0);

@@ -1,0 +1,80 @@
+CREATE TABLE Local ( 
+    id NUMBER PRIMARY KEY, 
+    nome VARCHAR2(100), 
+    end_rua VARCHAR2(100), 
+    end_numero VARCHAR2(10), 
+    end_bairro VARCHAR2(100), 
+    end_CEP VARCHAR2(10), 
+    end_cidade VARCHAR2(100) 
+)
+
+CREATE TABLE Evento ( 
+    id NUMBER PRIMARY KEY, 
+    nome VARCHAR2(100), 
+    data_hora_inicio TIMESTAMP, 
+    data_hora_fim TIMESTAMP, 
+    descricao VARCHAR2(500), 
+    valor_ingresso NUMBER, 
+    id_local NUMBER, 
+    CONSTRAINT fk_evento_local FOREIGN KEY (id_local) REFERENCES Local(id) 
+)
+
+CREATE TABLE Composto ( 
+    id_evento_composto NUMBER, 
+    id_evento_compoe NUMBER, 
+    CONSTRAINT fk_evento_composto FOREIGN KEY (id_evento_composto) REFERENCES Evento(id), 
+    CONSTRAINT fk_evento_compoe FOREIGN KEY (id_evento_compoe) REFERENCES Evento(id), 
+    PRIMARY KEY (id_evento_composto, id_evento_compoe) 
+)
+
+CREATE TABLE Foto ( 
+    id_evento NUMBER, 
+    titulo VARCHAR2(100), 
+    descricao VARCHAR2(500), 
+    CONSTRAINT fk_foto_evento FOREIGN KEY (id_evento) REFERENCES Evento(id) 
+)
+
+CREATE TABLE Plataforma_de_Venda ( 
+    id_plataforma NUMBER PRIMARY KEY, 
+    nome VARCHAR2(100), 
+    site VARCHAR2(200) 
+)
+
+CREATE TABLE Pessoa ( 
+    id NUMBER PRIMARY KEY, 
+    nome VARCHAR2(100), 
+    contato VARCHAR2(100) 
+)
+
+CREATE TABLE Organizador ( 
+    id_organizador NUMBER PRIMARY KEY, 
+    CNPJ VARCHAR2(14), 
+    CONSTRAINT fk_organizador_pessoa FOREIGN KEY (id_organizador) REFERENCES Pessoa(id) 
+)
+
+CREATE TABLE Participante ( 
+    id_participante NUMBER PRIMARY KEY, 
+    categoria VARCHAR2(50), 
+    CONSTRAINT fk_participante_pessoa FOREIGN KEY (id_participante) REFERENCES Pessoa(id) 
+)
+
+CREATE TABLE Contato_Telefone ( 
+    id NUMBER, 
+    telefone VARCHAR2(15), 
+    CONSTRAINT fk_telefone_pessoa FOREIGN KEY (id) REFERENCES Pessoa(id) 
+)
+
+CREATE TABLE Contato_Email ( 
+    id NUMBER, 
+    email VARCHAR2(100), 
+    CONSTRAINT fk_email_pessoa FOREIGN KEY (id) REFERENCES Pessoa(id) 
+)
+
+CREATE TABLE Participacao ( 
+    id_evento NUMBER, 
+    id_participante NUMBER, 
+    data_hora TIMESTAMP, 
+    CONSTRAINT fk_participacao_evento FOREIGN KEY (id_evento) REFERENCES Evento(id), 
+    CONSTRAINT fk_participacao_participante FOREIGN KEY (id_participante) REFERENCES Participante(id), 
+    PRIMARY KEY (id_evento, id_participante) 
+)

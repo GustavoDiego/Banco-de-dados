@@ -1,0 +1,39 @@
+-- Povoamento da tabela Local
+INSERT INTO Local (id, nome, end_rua, end_numero, end_bairro, end_CEP, end_cidade) VALUES
+(1, 'Teatro Guararapes', 'Av. Prof. Andrade Bezerra', '1000', 'Santo Amaro', '50000-000', 'Recife'),
+(2, 'Teatro de Santa Isabel', 'Rua da Aurora', '200', 'São José', '50000-000', 'Recife'),
+(3, 'Centro de Convenções', 'Av. Gov. Agamenon Magalhães', '300', 'Aflitos', '50000-000', 'Recife'),
+(4, 'Teatro Luiz Mendonça', 'Rua do Paraíso', '400', 'Jardim Botânico', '50000-000', 'Recife'),
+(5, 'Teatro Apolo', 'Rua do Apolo', '500', 'Santo Antonio', '50000-000', 'Recife');
+
+-- Povoamento da tabela Evento
+INSERT INTO Evento (id, nome, data_hora_inicio, data_hora_fim, descricao, valor_ingresso, id_local) VALUES
+(1, 'Show de Comédia', TIMESTAMP '2024-10-10 19:00:00', TIMESTAMP '2024-10-10 21:00:00', 'Uma noite de risadas.', 50, 1),
+(2, 'Concerto de Música Clássica', TIMESTAMP '2024-10-15 18:00:00', TIMESTAMP '2024-10-15 20:00:00', 'Clássicos da música.', 100, 2),
+(3, 'Teatro Infantil', TIMESTAMP '2024-10-20 15:00:00', TIMESTAMP '2024-10-20 17:00:00', 'Peça para a família.', 0, 3),
+(4, 'Festival de Jazz', TIMESTAMP '2024-10-25 19:00:00', TIMESTAMP '2024-10-25 23:00:00', 'Noite de jazz ao vivo.', 80, 4),
+(5, 'Exposição de Arte', TIMESTAMP '2024-10-30 10:00:00', TIMESTAMP '2024-10-30 18:00:00', 'Exposição gratuita de artistas locais.', 0, 5);
+
+-- Povoamento da tabela Pessoa
+INSERT INTO Pessoa (id, nome, contato) VALUES
+(1, 'Carlos Silva', 'carlos@example.com'),
+(2, 'Ana Pereira', 'ana@example.com'),
+(3, 'João Santos', 'joao@example.com'),
+(4, 'Maria Oliveira', 'maria@example.com'),
+(5, 'Pedro Almeida', 'pedro@example.com');
+
+-- Povoamento da tabela Organizador
+INSERT INTO Organizador (id_organizador, CNPJ) VALUES
+(1, '12345678000195'),
+(2, '98765432000109'),
+(3, '11122233000140'),
+(4, '22233344000151'),
+(5, '33344455000162');
+
+-- Povoamento da tabela Participante
+INSERT INTO Participante (id_participante, categoria) VALUES
+(1, 'Artista'),
+(2, 'Público'),
+(3, 'Voluntário'),
+(4, 'Patrocinador'),
+(5, 'Convidado');
