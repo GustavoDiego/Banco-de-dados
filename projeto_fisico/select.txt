@@ -1,0 +1,33 @@
+SELECT nome, valor_ingresso, data_hora_inicio
+FROM Evento
+WHERE valor_ingresso > 0
+ORDER BY data_hora_inicio DESC;
+
+
+SELECT id_local, COUNT(id) AS total_eventos, SUM(valor_ingresso) AS receita_total
+FROM Evento
+GROUP BY id_local;
+
+
+SELECT id_local, COUNT(id) AS total_eventos
+FROM Evento
+GROUP BY id_local
+HAVING COUNT(id) > 1
+ORDER BY total_eventos DESC
+FETCH FIRST 3 ROWS ONLY;
+
+
+
+SELECT e.nome AS evento, l.nome AS local, p.nome AS organizador
+FROM Evento e
+JOIN Organiza o ON e.id = o.id_evento
+JOIN Organizador org ON o.id_organizador = org.id_organizador
+JOIN Pessoa p ON org.id_organizador = p.id
+JOIN Local l ON e.id_local = l.id;
+
+
+
+SELECT nome, valor_ingresso
+FROM Evento
+WHERE valor_ingresso > (SELECT AVG(valor_ingresso) FROM Evento);
+
