@@ -15,75 +15,93 @@ VALUES (5, 'Teatro Apolo', 'Rua do Apolo', '121', 'Bairro do Recife', '50030-220
 
 
 
+INSERT INTO Organizador (id_organizador, CNPJ, nome, email, telefone) 
+VALUES (1, '12345678000195', 'Maria', 'maria@example.com', '81999999999');
 
-INSERT INTO Evento (id, nome, data_hora_inicio, data_hora_fim, descricao, valor_ingresso, id_local) 
-VALUES (1, 'Show de Comédia', TIMESTAMP '2024-10-10 19:00:00', TIMESTAMP '2024-10-10 21:00:00', 'Uma noite de risadas.', 50, 1);
+INSERT INTO Organizador (id_organizador, CNPJ, nome, email, telefone) 
+VALUES (2, '98765432000109', 'João', 'joao@example.com', '81988888888');
 
-INSERT INTO Evento (id, nome, data_hora_inicio, data_hora_fim, descricao, valor_ingresso, id_local) 
-VALUES (2, 'Concerto de Música Clássica', TIMESTAMP '2024-10-15 18:00:00', TIMESTAMP '2024-10-15 20:00:00', 'Clássicos da música.', 100, 2);
+INSERT INTO Organizador (id_organizador, CNPJ, nome, email, telefone) 
+VALUES (3, '11122233000140', 'José', 'jose@example.com', '81989999999');
 
-INSERT INTO Evento (id, nome, data_hora_inicio, data_hora_fim, descricao, valor_ingresso, id_local) 
-VALUES (3, 'Teatro Infantil', TIMESTAMP '2024-10-20 15:00:00', TIMESTAMP '2024-10-20 17:00:00', 'Peça para a família.', 0, 3);
+INSERT INTO Organizador (id_organizador, CNPJ, nome, email, telefone) 
+VALUES (4, '22233344000151', 'Antônio', 'antonio@example.com', '8198988888');
 
-INSERT INTO Evento (id, nome, data_hora_inicio, data_hora_fim, descricao, valor_ingresso, id_local) 
-VALUES (4, 'Festival de Jazz', TIMESTAMP '2024-10-25 19:00:00', TIMESTAMP '2024-10-25 23:00:00', 'Noite de jazz ao vivo.', 80, 4);
-
-INSERT INTO Evento (id, nome, data_hora_inicio, data_hora_fim, descricao, valor_ingresso, id_local) 
-VALUES (5, 'Exposição de Arte', TIMESTAMP '2024-10-30 10:00:00', TIMESTAMP '2024-10-30 18:00:00', 'Exposição gratuita de artistas locais.', 0, 5);
-
+INSERT INTO Organizador (id_organizador, CNPJ, nome, email, telefone) 
+VALUES (5, '33344455000162', 'Marcos', 'marcos@example.com', '8198989999');
 
 
 
-INSERT INTO Pessoa (id, nome, contato) 
-VALUES (1, 'Carlos Silva', 'carlos@example.com');
+INSERT INTO Participante (id, categoria, nome, email, telefone) 
+VALUES (1, 'Musica', 'Olivia Rodrigo', 'oliviarodrigo@example.com', '81900000000');
 
-INSERT INTO Pessoa (id, nome, contato) 
-VALUES (2, 'Ana Pereira', 'ana@example.com');
+INSERT INTO Participante (id, categoria, nome, email, telefone) 
+VALUES (2, 'Musica', 'Ariana Grande', 'arianagrande@example.com', '81901111111');
 
-INSERT INTO Pessoa (id, nome, contato) 
-VALUES (3, 'João Santos', 'joao@example.com');
+INSERT INTO Participante (id, categoria, nome, email, telefone) 
+VALUES (3, 'Musica', 'Rafaela Santos', 'rafaelasantos@example.com', '81901000000');
 
-INSERT INTO Pessoa (id, nome, contato) 
-VALUES (4, 'Maria Oliveira', 'maria@example.com');
+INSERT INTO Participante (id, categoria, nome, email, telefone) 
+VALUES (4, 'Ballet', 'Lago dos Cisnes', '', '');
 
-INSERT INTO Pessoa (id, nome, contato) 
-VALUES (5, 'Pedro Almeida', 'pedro@example.com');
-
-
+INSERT INTO Participante (id, categoria, nome, email, telefone) 
+VALUES (5, 'Teatro', 'Romeu e Julieta', '', '');
 
 
-INSERT INTO Organizador (id_organizador, CNPJ) 
-VALUES (1, '12345678000195');
 
-INSERT INTO Organizador (id_organizador, CNPJ) 
-VALUES (2, '98765432000109');
+INSERT INTO Plataforma_de_Venda (id, nome, site) 
+VALUES (1, 'TicketMaster', 'www.ticketmaster.com');
 
-INSERT INTO Organizador (id_organizador, CNPJ) 
-VALUES (3, '11122233000140');
+INSERT INTO Plataforma_de_Venda (id, nome, site) 
+VALUES (2, 'EventBrite', 'www.eventbrite.com');
 
-INSERT INTO Organizador (id_organizador, CNPJ) 
-VALUES (4, '22233344000151');
+INSERT INTO Plataforma_de_Venda (id, nome, site) 
+VALUES (3, 'Sympla', 'www.sympla.com.br');
 
-INSERT INTO Organizador (id_organizador, CNPJ) 
-VALUES (5, '33344455000162');
+INSERT INTO Plataforma_de_Venda (id, nome, site) 
+VALUES (4, 'Ingressos Recife', 'www.ingressosrecife.com');
+
+INSERT INTO Plataforma_de_Venda (id, nome, site) 
+VALUES (5, 'Bilheteria Digital', 'www.bilheteriadigital.com');
 
 
 
 
-INSERT INTO Participante (id, categoria) 
-VALUES (1, 'Artista');
+INSERT INTO Evento (id, nome, data_hora_inicio, data_hora_fim, descricao, valor_ingresso, id_local, id_organizador) 
+VALUES (1, 'Show de Comédia', TIMESTAMP '2024-10-10 19:00:00', TIMESTAMP '2024-10-10 21:00:00', 'Uma noite de risadas.', 50, 1, 1);
 
-INSERT INTO Participante (id, categoria) 
-VALUES (2, 'Público');
+INSERT INTO Evento (id, nome, data_hora_inicio, data_hora_fim, descricao, valor_ingresso, id_local, id_organizador) 
+VALUES (2, 'Concerto de Música Clássica', TIMESTAMP '2024-10-15 18:00:00', TIMESTAMP '2024-10-15 20:00:00', 'Clássicos da música.', 100, 2, 1);
 
-INSERT INTO Participante (id, categoria) 
-VALUES (3, 'Voluntário');
+INSERT INTO Evento (id, nome, data_hora_inicio, data_hora_fim, descricao, valor_ingresso, id_local, id_organizador) 
+VALUES (3, 'Teatro Infantil', TIMESTAMP '2024-10-20 15:00:00', TIMESTAMP '2024-10-20 17:00:00', 'Peça para a família.', 0, 3, 2);
 
-INSERT INTO Participante (id, categoria) 
-VALUES (4, 'Patrocinador');
+INSERT INTO Evento (id, nome, data_hora_inicio, data_hora_fim, descricao, valor_ingresso, id_local, id_organizador) 
+VALUES (4, 'Festival de Jazz', TIMESTAMP '2024-10-25 19:00:00', TIMESTAMP '2024-10-25 23:00:00', 'Noite de jazz ao vivo.', 80, 4, 3);
 
-INSERT INTO Participante (id, categoria) 
-VALUES (5, 'Convidado');
+INSERT INTO Evento (id, nome, data_hora_inicio, data_hora_fim, descricao, valor_ingresso, id_local, id_organizador) 
+VALUES (5, 'Exposição de Arte', TIMESTAMP '2024-10-30 10:00:00', TIMESTAMP '2024-10-30 18:00:00', 'Exposição gratuita de artistas locais.', 0, 5, 4);
+
+
+
+INSERT INTO Composto (id_evento_composto, id_evento_compoe) 
+VALUES (1, 2);
+
+
+
+INSERT INTO Foto (id_evento, titulo, descricao) 
+VALUES (1, 'Festival de Música', 'Imagem do palco principal');
+
+INSERT INTO Foto (id_evento, titulo, descricao) 
+VALUES (2, 'Peça de Teatro', 'Cena final da peça');
+
+
+
+INSERT INTO Participacao (id_evento, id_participante, data_hora) 
+VALUES (1, 1, TIMESTAMP '2024-10-15 18:30:00');
+
+INSERT INTO Participacao (id_evento, id_participante, data_hora) 
+VALUES (2, 2, TIMESTAMP '2024-10-20 19:10:00');
 
 
 
@@ -104,23 +122,6 @@ VALUES (5, 'A exposição estava maravilhosa.', TIMESTAMP '2024-10-31 14:00:00',
 
 
 
-INSERT INTO Plataforma_de_Venda (id_plataforma, nome, site) 
-VALUES (1, 'TicketMaster', 'www.ticketmaster.com');
-
-INSERT INTO Plataforma_de_Venda (id_plataforma, nome, site) 
-VALUES (2, 'EventBrite', 'www.eventbrite.com');
-
-INSERT INTO Plataforma_de_Venda (id_plataforma, nome, site) 
-VALUES (3, 'Sympla', 'www.sympla.com.br');
-
-INSERT INTO Plataforma_de_Venda (id_plataforma, nome, site) 
-VALUES (4, 'Ingressos Recife', 'www.ingressosrecife.com');
-
-INSERT INTO Plataforma_de_Venda (id_plataforma, nome, site) 
-VALUES (5, 'Bilheteria Digital', 'www.bilheteriadigital.com');
-
-
-
 INSERT INTO Promocao (id_plataforma, id_evento, id_organizador, desconto) 
 VALUES (1, 1, 1, 20);
 
@@ -135,7 +136,6 @@ VALUES (4, 4, 4, 25);
 
 INSERT INTO Promocao (id_plataforma, id_evento, id_organizador, desconto) 
 VALUES (5, 5, 5, 30);
-
 
 
 
