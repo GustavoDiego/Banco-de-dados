@@ -101,6 +101,9 @@ A plataforma não requer que os usuários criem contas, evitando a retenção de
 
 ![Modelo Conceitual](https://github.com/GustavoDiego/Banco-de-dados/blob/readd-names/projeto_conceitual/mdconceitual.png?raw=true)
 
+### Modelo Físico
+O código SQL responsável por criar as tabelas pode ser acessado através do site [Oracle Live SQL](https://livesql.oracle.com/ords/f?p=590:43:104094359396750:::::&success_msg=U2NyaXB0ICZxdW90O0JhbmNvIGRlIGRhZG9zIC0gUHJvamV0byBGw61zaWNvJnF1.,b3Q7IHNhdmVkLg%2F6-mzTYrFIn8SigCACBvookAsPelfLA5GX1b5SG9pjintZGtAR56sosCdJfDKbf0DPD3hU4mSXqVmsAutmKHfSA)
+
 ---
 
 ## Conceitos Utilizados 🧠
