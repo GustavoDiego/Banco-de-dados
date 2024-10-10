@@ -69,7 +69,7 @@ CREATE TABLE Foto (
     descricao VARCHAR2(500), 
     CONSTRAINT pk_evento_titulo PRIMARY KEY (id_evento, titulo),
     CONSTRAINT fk_foto_evento FOREIGN KEY (id_evento) REFERENCES Evento(id) 
-);
+); 
 
 
 
@@ -87,8 +87,8 @@ CREATE TABLE Comentario (
     id_coment NUMBER PRIMARY KEY, 
     texto VARCHAR2(500) NOT NULL, 
     data_hora TIMESTAMP, 
-    id_evento NUMBER NOT NULL UNIQUE, 
-    id_participante NUMBER NOT NULL UNIQUE,
+    id_evento NUMBER NOT NULL, 
+    id_participante NUMBER NOT NULL,
     CONSTRAINT fk_coment_evento_participante FOREIGN KEY (id_evento, id_participante) REFERENCES Participacao(id_evento, id_participante)
 );
 
