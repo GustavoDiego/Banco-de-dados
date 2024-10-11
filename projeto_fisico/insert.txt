@@ -1,0 +1,170 @@
+INSERT INTO Local (id, nome, end_rua, end_numero, end_bairro, end_CEP, end_cidade) 
+VALUES (1, 'Teatro Guararapes', 'Av. Prof. Andrade Bezerra', '1000', 'Salgadinho', '53111-900', 'Olinda');
+
+INSERT INTO Local (id, nome, end_rua, end_numero, end_bairro, end_CEP, end_cidade) 
+VALUES (2, 'Teatro de Santa Isabel', 'Praça da República', '200', 'Santo Antônio', '50030-903', 'Recife');
+
+INSERT INTO Local (id, nome, end_rua, end_numero, end_bairro, end_CEP, end_cidade) 
+VALUES (3, 'Centro de Convenções', 'Av. Gov. Agamenon Magalhães', '300', 'Salgadinho', '53111-900', 'Olinda');
+
+INSERT INTO Local (id, nome, end_rua, end_numero, end_bairro, end_CEP, end_cidade) 
+VALUES (4, 'Teatro Luiz Mendonça', 'Av. Boa Viagem', '400', 'Boa Viagem', '51030-000', 'Recife');
+
+INSERT INTO Local (id, nome, end_rua, end_numero, end_bairro, end_CEP, end_cidade) 
+VALUES (5, 'Teatro Apolo', 'Rua do Apolo', '121', 'Bairro do Recife', '50030-220', 'Recife');
+
+
+
+INSERT INTO Organizador (id, CNPJ, nome, email, telefone) 
+VALUES (1, '12345678000195', 'Maria', 'maria@example.com', '81999999999');
+
+INSERT INTO Organizador (id, CNPJ, nome, email, telefone) 
+VALUES (2, '98765432000109', 'João', 'joao@example.com', '81988888888');
+
+INSERT INTO Organizador (id, CNPJ, nome, email, telefone) 
+VALUES (3, '11122233000140', 'José', 'jose@example.com', '81989999999');
+
+INSERT INTO Organizador (id, CNPJ, nome, email, telefone) 
+VALUES (4, '22233344000151', 'Antônio', 'antonio@example.com', '8198988888');
+
+INSERT INTO Organizador (id, CNPJ, nome, email, telefone) 
+VALUES (5, '33344455000162', 'Marcos', 'marcos@example.com', '8198989999');
+
+
+
+INSERT INTO Participante (id, categoria, nome, email, telefone) 
+VALUES (1, 'Musica', 'Olivia Rodrigo', 'oliviarodrigo@example.com', '81900000000');
+
+INSERT INTO Participante (id, categoria, nome, email, telefone) 
+VALUES (2, 'Musica', 'Ariana Grande', 'arianagrande@example.com', '81901111111');
+
+INSERT INTO Participante (id, categoria, nome, email, telefone) 
+VALUES (3, 'Musica', 'Rafaela Santos', 'rafaelasantos@example.com', '81901000000');
+
+INSERT INTO Participante (id, categoria, nome, email, telefone) 
+VALUES (4, 'Ballet', 'Lago dos Cisnes', '', '');
+
+INSERT INTO Participante (id, categoria, nome, email, telefone) 
+VALUES (5, 'Teatro', 'Romeu e Julieta', '', '');
+
+
+
+INSERT INTO Plataforma_de_Venda (id, nome, site) 
+VALUES (1, 'TicketMaster', 'www.ticketmaster.com');
+
+INSERT INTO Plataforma_de_Venda (id, nome, site) 
+VALUES (2, 'EventBrite', 'www.eventbrite.com');
+
+INSERT INTO Plataforma_de_Venda (id, nome, site) 
+VALUES (3, 'Sympla', 'www.sympla.com.br');
+
+INSERT INTO Plataforma_de_Venda (id, nome, site) 
+VALUES (4, 'Ingressos Recife', 'www.ingressosrecife.com');
+
+INSERT INTO Plataforma_de_Venda (id, nome, site) 
+VALUES (5, 'Bilheteria Digital', 'www.bilheteriadigital.com');
+
+
+
+
+INSERT INTO Evento (id, nome, data_hora_inicio, data_hora_fim, descricao, valor_ingresso, id_local, id_organizador) 
+VALUES (1, 'Show de Comédia', TIMESTAMP '2024-10-10 19:00:00', TIMESTAMP '2024-10-10 21:00:00', 'Uma noite de risadas.', 50, 1, 1);
+
+INSERT INTO Evento (id, nome, data_hora_inicio, data_hora_fim, descricao, valor_ingresso, id_local, id_organizador) 
+VALUES (2, 'Concerto de Música Clássica', TIMESTAMP '2024-10-15 18:00:00', TIMESTAMP '2024-10-15 20:00:00', 'Clássicos da música.', 100, 2, 2);
+
+INSERT INTO Evento (id, nome, data_hora_inicio, data_hora_fim, descricao, valor_ingresso, id_local, id_organizador) 
+VALUES (3, 'Teatro Infantil', TIMESTAMP '2024-10-20 15:00:00', TIMESTAMP '2024-10-20 17:00:00', 'Peça para a família.', 0, 3, 3);
+
+INSERT INTO Evento (id, nome, data_hora_inicio, data_hora_fim, descricao, valor_ingresso, id_local, id_organizador) 
+VALUES (4, 'Festival de Jazz', TIMESTAMP '2024-10-25 19:00:00', TIMESTAMP '2024-10-25 23:00:00', 'Noite de jazz ao vivo.', 80, 4, 4);
+
+INSERT INTO Evento (id, nome, data_hora_inicio, data_hora_fim, descricao, valor_ingresso, id_local, id_organizador) 
+VALUES (5, 'Exposição de Arte', TIMESTAMP '2024-10-30 10:00:00', TIMESTAMP '2024-10-30 18:00:00', 'Exposição gratuita de artistas locais.', 0, 5, 5);
+
+INSERT INTO Evento (id, nome, data_hora_inicio, data_hora_fim, descricao, valor_ingresso, id_local, id_organizador) 
+VALUES (6, 'Exposição de Quadros da Frida Kahlo', TIMESTAMP '2024-10-30 10:00:00', TIMESTAMP '2024-10-30 18:00:00', 'Exposição gratuita de obras da Frida Kahlo.', 0, 5, 5);
+
+INSERT INTO Evento (id, nome, data_hora_inicio, data_hora_fim, descricao, valor_ingresso, id_local, id_organizador) 
+VALUES (7, 'Exposição de Quadros do Van Gogh', TIMESTAMP '2024-10-30 10:00:00', TIMESTAMP '2024-10-30 18:00:00', 'Exposição gratuita de obras do Van Gogh.', 0, 5, 5);
+
+
+
+INSERT INTO Composto (id_evento_composto, id_evento_compoe) 
+VALUES (1, 2);
+INSERT INTO Composto (id_evento_composto, id_evento_compoe) 
+VALUES (1, 3);
+INSERT INTO Composto (id_evento_composto, id_evento_compoe) 
+VALUES (1, 4);
+INSERT INTO Composto (id_evento_composto, id_evento_compoe) 
+VALUES (5, 6);
+INSERT INTO Composto (id_evento_composto, id_evento_compoe) 
+VALUES (5, 7);
+
+
+
+INSERT INTO Foto (id_evento, titulo, descricao) 
+VALUES (1, 'Festival de Música', 'Imagem do palco principal');
+
+INSERT INTO Foto (id_evento, titulo, descricao) 
+VALUES (2, 'Peça de Teatro', 'Cena final da peça');
+
+INSERT INTO Foto (id_evento, titulo, descricao) 
+VALUES (3, 'Fogueira de São João', 'Foto da fogueira');
+
+INSERT INTO Foto (id_evento, titulo, descricao) 
+VALUES (4, 'Show de brega', 'foto do palco');
+
+INSERT INTO Foto (id_evento, titulo, descricao) 
+VALUES (5, 'Peça de Teatro', 'Cena final da peça');
+
+
+
+INSERT INTO Participacao (id_evento, id_participante, data_hora) 
+VALUES (1, 1, TIMESTAMP '2024-10-15 18:30:00');
+
+INSERT INTO Participacao (id_evento, id_participante, data_hora) 
+VALUES (2, 2, TIMESTAMP '2024-10-20 19:10:00');
+
+INSERT INTO Participacao (id_evento, id_participante, data_hora) 
+VALUES (3, 3, TIMESTAMP '2024-10-20 19:10:00');
+
+INSERT INTO Participacao (id_evento, id_participante, data_hora) 
+VALUES (4, 4, TIMESTAMP '2024-10-20 19:10:00');
+
+INSERT INTO Participacao (id_evento, id_participante, data_hora) 
+VALUES (5, 5, TIMESTAMP '2024-10-20 19:10:00');
+
+
+
+INSERT INTO Comentario (id_coment, texto, data_hora, id_evento, id_participante) 
+VALUES (1, 'Evento incrível, adorei!', TIMESTAMP '2024-10-11 09:00:00', 1, 1);
+
+INSERT INTO Comentario (id_coment, texto, data_hora, id_evento, id_participante) 
+VALUES (2, 'A música estava espetacular.', TIMESTAMP '2024-10-16 10:00:00', 2, 2);
+
+INSERT INTO Comentario (id_coment, texto, data_hora, id_evento, id_participante) 
+VALUES (3, 'Ótimo para crianças!', TIMESTAMP '2024-10-21 16:00:00', 3, 3);
+
+INSERT INTO Comentario (id_coment, texto, data_hora, id_evento, id_participante) 
+VALUES (4, 'Quero mais eventos como esse.', TIMESTAMP '2024-10-26 12:00:00', 4, 4);
+
+INSERT INTO Comentario (id_coment, texto, data_hora, id_evento, id_participante) 
+VALUES (5, 'A exposição estava maravilhosa.', TIMESTAMP '2024-10-31 14:00:00', 5, 5);
+
+
+
+INSERT INTO Promocao (id_plataforma, id_evento, id_organizador, desconto) 
+VALUES (1, 1, 1, 20);
+
+INSERT INTO Promocao (id_plataforma, id_evento, id_organizador, desconto) 
+VALUES (2, 2, 2, 15);
+
+INSERT INTO Promocao (id_plataforma, id_evento, id_organizador, desconto) 
+VALUES (3, 3, 3, 10);
+
+INSERT INTO Promocao (id_plataforma, id_evento, id_organizador, desconto) 
+VALUES (4, 4, 4, 25);
+
+INSERT INTO Promocao (id_plataforma, id_evento, id_organizador, desconto) 
+VALUES (5, 5, 5, 30);

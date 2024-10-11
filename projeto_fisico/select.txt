@@ -1,0 +1,28 @@
+SELECT nome, data_hora_inicio, valor_ingresso
+FROM Evento
+WHERE data_hora_inicio > TIMESTAMP '2024-10-01 00:00:00'
+ORDER BY valor_ingresso ASC;
+
+
+SELECT p.id_evento, COUNT(p.id_participante) AS total_participantes
+FROM Participacao p
+GROUP BY p.id_evento;
+
+
+SELECT id_evento, AVG(desconto) AS media_desconto
+FROM Promocao
+GROUP BY id_evento
+HAVING AVG(desconto) > 10
+FETCH FIRST 3 ROWS ONLY;
+
+
+SELECT e.nome AS evento_nome, o.nome AS organizador_nome
+FROM Evento e
+JOIN Organizador o ON e.id_organizador = o.id;
+
+
+SELECT nome, valor_ingresso
+FROM Evento
+WHERE valor_ingresso > (
+    SELECT AVG(valor_ingresso) FROM Evento
+);
